@@ -15,9 +15,9 @@ func hostname() string {
 
 func serverDescription() string {
 	if happy {
-		return "Happy server on host " + hostname()
+		return "Very Happy server on host " + hostname()
 	} else {
-		return "Sad server on host " + hostname()
+		return "Very Sad server on host " + hostname()
 	}
 }
 
