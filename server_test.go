@@ -56,12 +56,12 @@ func TestHappy(t *testing.T) {
 	os.Setenv("HOSTNAME", "abc123")
 	happy = false
 	confirm(t, MakeHappy, "/something", 200, "Very Sad server on host abc123 is now happy\n")
-	confirm(t, Something, "/something", 200, "Very Happy server on host abc123 handling request: /something\n")
+	confirm(t, Something, "/something", 200, "Very Happy server on host abc123 is handling request: /something\n")
 }
 
 func TestSad(t *testing.T) {
 	os.Setenv("HOSTNAME", "abc123")
 	happy = true
 	confirm(t, MakeSad, "/something", 200, "Very Happy server on host abc123 is now sad\n")
-	confirm(t, Something, "/something", 500, "Very Sad server on host abc123 handling request: /something\n")
+	confirm(t, Something, "/something", 500, "Very Sad server on host abc123 is handling request: /something\n")
 }

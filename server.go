@@ -42,7 +42,7 @@ func Something(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 
-	response := serverDescription() + " handling request: " + r.URL.String() + "\n"
+	response := serverDescription() + " is handling request: " + r.URL.String() + "\n"
 	fmt.Println(response)
 	io.WriteString(w, response)
 }
